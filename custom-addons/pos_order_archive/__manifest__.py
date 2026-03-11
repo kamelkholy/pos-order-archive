@@ -14,7 +14,7 @@
         - Muted styling for archived orders in list view
     """,
     'author': 'Kamel Elkholy',
-    'website': 'https://github.com/kamelelkholy/pos-order-archive',
+    'website': 'https://github.com/kamelkholy/pos-order-archive',
     'support': 'kamelabdelkader17@gmail.com',
     'category': 'Point of Sale',
     'depends': ['point_of_sale'],
