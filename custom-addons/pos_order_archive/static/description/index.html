@@ -1,0 +1,125 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color: #714B67;">POS Order Archive</h2>
+        <h3 class="oe_slogan">Easily archive and unarchive your Point of Sale orders</h3>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan" style="color: #714B67;">Overview</h2>
+            <p class="oe_mt32 text-center" style="font-size: 16px;">
+                This module adds <strong>archive/unarchive</strong> functionality to
+                <strong>Point of Sale orders</strong>. Keep your POS order list clean by
+                archiving old or cancelled orders without deleting any data.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color: #714B67;">Key Features</h2>
+        <div class="oe_span4">
+            <div class="text-center">
+                <span style="font-size: 48px;">📦</span>
+                <h3>Archive Orders</h3>
+                <p>Select one or more POS orders and archive them via the <em>Actions</em> menu.
+                   Archived orders are hidden from the default list view.</p>
+            </div>
+        </div>
+        <div class="oe_span4">
+            <div class="text-center">
+                <span style="font-size: 48px;">🔍</span>
+                <h3>Filter Archived</h3>
+                <p>A dedicated <em>Archived</em> search filter lets you quickly find and
+                   review all archived orders when needed.</p>
+            </div>
+        </div>
+        <div class="oe_span4">
+            <div class="text-center">
+                <span style="font-size: 48px;">↩️</span>
+                <h3>Unarchive Anytime</h3>
+                <p>Restore archived orders with a single click. No data is ever deleted —
+                   archiving only hides orders from the default view.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color: #714B67;">How It Works</h2>
+        <div class="oe_span12">
+            <table class="table table-bordered" style="font-size: 15px;">
+                <thead>
+                    <tr style="background: #714B67; color: #fff;">
+                        <th style="padding: 12px;">Feature</th>
+                        <th style="padding: 12px;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px;"><strong>Active field</strong></td>
+                        <td style="padding: 10px;">Adds an <code>active</code> boolean field to <code>pos.order</code>, enabling Odoo's native archive mechanism.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>List view</strong></td>
+                        <td style="padding: 10px;">Archived orders appear muted (greyed out) when visible. An optional <em>Active</em> column is available.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>Form view</strong></td>
+                        <td style="padding: 10px;">A red <em>"Archived"</em> ribbon is displayed on archived order forms for clear visual indication.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>Search filter</strong></td>
+                        <td style="padding: 10px;">An <em>Archived</em> filter is added to the search bar under Filters.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color: #714B67;">Usage</h2>
+        <div class="oe_span12">
+            <ol style="font-size: 15px; line-height: 2;">
+                <li>Install the module from the Apps menu.</li>
+                <li>Navigate to <strong>Point of Sale → Orders → Orders</strong>.</li>
+                <li>Select one or more orders → click <strong>Action → Archive</strong>.</li>
+                <li>To view archived orders, use <strong>Filters → Archived</strong> in the search bar.</li>
+                <li>To restore, select archived orders → <strong>Action → Unarchive</strong>.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color: #714B67;">Technical Details</h2>
+        <div class="oe_span12">
+            <ul style="font-size: 15px; line-height: 2;">
+                <li><strong>Compatibility:</strong> Odoo 18.0 Community &amp; Enterprise</li>
+                <li><strong>Dependencies:</strong> Point of Sale (<code>point_of_sale</code>)</li>
+                <li><strong>License:</strong> LGPL-3</li>
+                <li><strong>Data safety:</strong> Archiving never deletes records. All order data, payment info, and session references are preserved.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 text-center">
+            <h2 class="oe_slogan" style="color: #714B67;">Support</h2>
+            <p style="font-size: 15px;">
+                For bug reports and feature requests, please open an issue on
+                <a href="https://github.com/kamelelkholy/pos-order-archive/issues">GitHub</a>
+                or contact <a href="mailto:kamelabdelkader17@gmail.com">kamelabdelkader17@gmail.com</a>.
+            </p>
+        </div>
+    </div>
+</section>
