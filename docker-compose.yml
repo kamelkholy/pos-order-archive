@@ -10,7 +10,7 @@ services:
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./custom-addons:/mnt/extra-addons
+      - ./pos_order_archive:/mnt/extra-addons/pos_order_archive
     environment:
       - HOST=db
       - PORT=5432
