@@ -19,3 +19,6 @@ filestore/
 # Environment
 .env
 *.log
+
+# development
+*.zip
