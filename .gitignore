@@ -22,3 +22,4 @@ filestore/
 
 # development
 *.zip
+__pycache__/
