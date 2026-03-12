@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'POS Order Archive',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'summary': 'Archive and unarchive Point of Sale orders',
     'description': """
         Adds archive/unarchive functionality to POS Orders.
