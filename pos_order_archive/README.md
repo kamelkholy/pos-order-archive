@@ -1,6 +1,6 @@
 # POS Order Archive
 
-Archive and unarchive Point of Sale orders in Odoo 18.
+Archive and unarchive Point of Sale orders in Odoo 19.
 
 ## Features
 
@@ -25,7 +25,7 @@ Archive and unarchive Point of Sale orders in Odoo 18.
 
 ## Compatibility
 
-- Odoo 18.0 Community & Enterprise
+- Odoo 19.0 Community & Enterprise
 - Depends on: `point_of_sale`
 
 ## License

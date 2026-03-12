@@ -1,4 +1,4 @@
-# Odoo 17 Development Environment
+# Odoo 19 Development Environment
 
 ## Prerequisites
 
@@ -22,27 +22,31 @@ docker compose up -d
   - **Language / Country**: pick yours
   - Check **Demo data** if you want sample data
 
-### 3. Install your custom module
+### 3. Install the POS Order Archive module
 
 1. Go to **Apps**
-2. Click **Update Apps List** (you may need to enable Developer Mode first)
-3. Search for **"My Custom Module"**
+2. Click **Update Apps List** (enable Developer Mode first if needed)
+3. Search for **"POS Order Archive"**
 4. Click **Install**
 
 ## Project Structure
 
 ```
 .
-├── docker-compose.yml          # Docker services (Odoo + PostgreSQL)
+├── docker-compose.yml              # Docker services (Odoo 19 + PostgreSQL 16)
 ├── config/
-│   └── odoo.conf               # Odoo server configuration
-├── custom-addons/              # Your custom modules go here
-│   └── my_custom_module/       # Sample module
-│       ├── __manifest__.py     # Module metadata
-│       ├── __init__.py         # Python package init
-│       ├── models/             # Business logic (models)
-│       ├── views/              # UI definitions (XML)
-│       └── security/           # Access control
+│   └── odoo.conf                   # Odoo server configuration
+├── pos_order_archive/              # Custom module (mounted as addon)
+│   ├── __manifest__.py
+│   ├── __init__.py
+│   ├── models/
+│   │   └── pos_order.py            # Adds active field to pos.order
+│   ├── views/
+│   │   └── pos_order_views.xml     # List, form, search view extensions
+│   ├── static/
+│   │   └── description/            # App store assets
+│   ├── LICENSE
+│   └── README.md
 └── README.md
 ```
 
@@ -56,27 +60,31 @@ Or navigate to: `http://localhost:8069/web?debug=1`
 
 ### Create a new module
 
-1. Create a new folder under `custom-addons/`:
+1. Create a new folder at the repo root:
    ```
-   custom-addons/
-   └── your_module_name/
-       ├── __manifest__.py
-       ├── __init__.py
-       ├── models/
-       │   ├── __init__.py
-       │   └── your_model.py
-       ├── views/
-       │   └── your_views.xml
-       └── security/
-           └── ir.model.access.csv
+   your_module_name/
+   ├── __manifest__.py
+   ├── __init__.py
+   ├── models/
+   │   ├── __init__.py
+   │   └── your_model.py
+   ├── views/
+   │   └── your_views.xml
+   └── security/
+       └── ir.model.access.csv
    ```
 
-2. Restart Odoo to pick up the new module:
+2. Add the volume mount in `docker-compose.yml`:
+   ```yaml
+   - ./your_module_name:/mnt/extra-addons/your_module_name
+   ```
+
+3. Restart Odoo to pick up the new module:
    ```bash
    docker compose restart odoo
    ```
 
-3. In the browser: **Apps** → **Update Apps List** → search & install
+4. In the browser: **Apps** → **Update Apps List** → search & install
 
 ### Auto-reload (dev mode)
 
@@ -115,6 +123,6 @@ docker compose down -v
 
 ## Useful Resources
 
-- [Odoo 17 Developer Documentation](https://www.odoo.com/documentation/17.0/developer.html)
-- [OWL (Odoo Web Library)](https://www.odoo.com/documentation/17.0/developer/reference/frontend/owl.html)
-- [Odoo ORM API](https://www.odoo.com/documentation/17.0/developer/reference/backend/orm.html)
+- [Odoo 19 Developer Documentation](https://www.odoo.com/documentation/19.0/developer.html)
+- [OWL (Odoo Web Library)](https://www.odoo.com/documentation/19.0/developer/reference/frontend/owl.html)
+- [Odoo ORM API](https://www.odoo.com/documentation/19.0/developer/reference/backend/orm.html)
