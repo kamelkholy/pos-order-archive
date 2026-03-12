@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   odoo:
-    image: odoo:17.0
+    image: odoo:18.0
     container_name: odoo-dev
     depends_on:
       - db
